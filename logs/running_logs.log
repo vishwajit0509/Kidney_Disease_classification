@@ -53,3 +53,36 @@ x==========x]
 [2025-04-05 15:15:27,661: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
 
 x==========x]
+[2025-04-05 15:39:34,194: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-05 15:39:34,196: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-05 15:39:34,198: INFO: common: created directory at: artifacts]
+[2025-04-05 15:39:34,200: INFO: common: created directory at: artifacts\training]
+[2025-04-05 16:09:07,492: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-05 16:09:07,492: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-05 16:09:07,492: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-05 16:09:07,492: INFO: common: created directory at: artifacts]
+[2025-04-05 16:09:07,492: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-05 16:09:07,492: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/11RqO9t7uiEhHvep5feXLQ8GWmvYwWE3Q/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-05 16:11:21,912: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/11RqO9t7uiEhHvep5feXLQ8GWmvYwWE3Q/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-05 16:11:41,821: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-04-05 16:11:41,821: INFO: main: *******************]
+[2025-04-05 16:11:41,821: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-04-05 16:11:41,821: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-05 16:11:41,821: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-05 16:11:41,821: INFO: common: created directory at: artifacts]
+[2025-04-05 16:11:41,821: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-04-05 16:11:42,603: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-05 16:11:43,004: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-04-05 16:11:43,004: INFO: main: *******************]
+[2025-04-05 16:11:43,004: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-04-05 16:11:43,004: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-05 16:11:43,015: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-05 16:11:43,015: INFO: common: created directory at: artifacts]
+[2025-04-05 16:11:43,015: INFO: common: created directory at: artifacts\training]
+[2025-04-05 16:31:09,850: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
