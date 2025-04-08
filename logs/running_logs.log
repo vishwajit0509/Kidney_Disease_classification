@@ -86,3 +86,182 @@ x==========x]
 [2025-04-05 16:31:09,850: INFO: main: >>>>>> stage Training completed <<<<<<
 
 x==========x]
+[2025-04-08 17:33:12,095: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 17:33:12,104: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 17:33:12,106: INFO: common: created directory at: artifacts]
+[2025-04-08 17:34:31,514: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 17:34:31,516: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 17:34:31,516: INFO: common: created directory at: artifacts]
+[2025-04-08 17:40:23,634: INFO: common: json file saved at: scores.json]
+[2025-04-08 17:40:36,278: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-08 17:40:36,978: INFO: builder_impl: Assets written to: C:\Users\vishw\AppData\Local\Temp\tmpbjflmx5i\model\data\model\assets]
+[2025-04-08 18:01:11,868: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-08 18:01:11,884: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 18:01:11,884: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 18:01:11,884: INFO: common: created directory at: artifacts]
+[2025-04-08 18:01:11,884: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-08 18:01:11,884: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 18:01:26,257: ERROR: main: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))]
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\http\client.py", line 1368, in getresponse
+    response.begin()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\http\client.py", line 317, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\http\client.py", line 286, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\http\client.py", line 1368, in getresponse
+    response.begin()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\http\client.py", line 317, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\http\client.py", line 286, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 724, in send
+    history = [resp for resp in gen]
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 724, in <listcomp>
+    history = [resp for resp in gen]
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 265, in resolve_redirects
+    resp = self.send(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2025-04-08 18:07:49,231: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-08 18:07:49,248: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 18:07:49,250: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 18:07:49,250: INFO: common: created directory at: artifacts]
+[2025-04-08 18:07:49,251: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-08 18:07:49,251: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 18:08:56,946: ERROR: main: ('Connection broken: IncompleteRead(14414193 bytes read, 43299759 more expected)', IncompleteRead(14414193 bytes read, 43299759 more expected))]
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 754, in _error_catcher
+    yield
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 900, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(14414193 bytes read, 43299759 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 1066, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 983, in read
+    data = self._raw_read(amt)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 878, in _raw_read
+    with self._error_catcher():
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 778, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(14414193 bytes read, 43299759 more expected)', IncompleteRead(14414193 bytes read, 43299759 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(14414193 bytes read, 43299759 more expected)', IncompleteRead(14414193 bytes read, 43299759 more expected))
+[2025-04-08 18:11:13,168: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-08 18:11:13,172: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 18:11:13,172: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 18:11:13,172: INFO: common: created directory at: artifacts]
+[2025-04-08 18:11:13,172: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-08 18:11:13,172: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 18:12:57,036: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 18:12:57,492: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-04-08 18:12:57,492: INFO: main: *******************]
+[2025-04-08 18:12:57,492: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-04-08 18:12:57,492: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 18:12:57,492: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 18:12:57,492: INFO: common: created directory at: artifacts]
+[2025-04-08 18:12:57,492: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-04-08 18:12:58,003: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-08 18:12:58,236: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-04-08 18:12:58,237: INFO: main: *******************]
+[2025-04-08 18:12:58,238: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-04-08 18:12:58,239: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 18:12:58,241: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 18:12:58,242: INFO: common: created directory at: artifacts]
+[2025-04-08 18:12:58,242: INFO: common: created directory at: artifacts\training]
+[2025-04-08 18:13:55,645: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-04-08 18:13:55,646: INFO: main: *******************]
+[2025-04-08 18:13:55,647: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-04-08 18:13:55,651: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 18:13:55,655: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 18:13:55,656: INFO: common: created directory at: artifacts]
+[2025-04-08 18:14:16,745: INFO: common: json file saved at: scores.json]
+[2025-04-08 18:14:16,745: INFO: common: json file saved at: scores.json]
+[2025-04-08 18:14:16,745: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-04-08 18:16:23,990: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 18:16:23,992: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 18:16:23,994: INFO: common: created directory at: artifacts]
+[2025-04-08 18:17:01,175: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 18:17:01,176: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 18:17:01,178: INFO: common: created directory at: artifacts]
+[2025-04-08 18:17:13,926: INFO: common: json file saved at: scores.json]
+[2025-04-08 18:17:16,643: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-08 18:17:17,081: INFO: builder_impl: Assets written to: C:\Users\vishw\AppData\Local\Temp\tmpsqopywbm\model\data\model\assets]
