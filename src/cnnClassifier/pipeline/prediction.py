@@ -10,7 +10,7 @@ class PredictionPipeline:
     def predict(self):
         try:
             # Load model
-            model_path = os.path.join("artifacts", "training", "model.h5")
+            model_path = os.path.join("model", "model.h5")
             model = load_model(model_path)
             
             # Load and preprocess image
