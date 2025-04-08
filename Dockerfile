@@ -5,7 +5,7 @@ FROM python:3.10-slim-buster
 RUN apt update -y && apt install awscli -y
 
 # Set the working directory
-WORKDIR /app
+WORKDIR C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\app.py
 
 # Copy app files into the container
 COPY ./app .
