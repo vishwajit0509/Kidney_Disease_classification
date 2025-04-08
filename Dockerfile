@@ -1,17 +1,23 @@
-# Use Python 3.10 slim image
 FROM python:3.10-slim-buster
 
-# Update and install AWS CLI
-RUN apt update -y && apt install awscli -y
+# Set working directory first
+WORKDIR /app
 
-# Set the working directory
-WORKDIR C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\app.py
+# 1. Copy only requirements first (better caching)
+COPY requirements.txt .
 
-# Copy app files into the container
-COPY ./app .
+# 2. Install system tools
+RUN apt-get update -y && \
+    apt-get install -y --no-install-recommends \
+    awscli \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies
+# 3. Install Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Run the app
-CMD ["python", "app.py"]
+# 4. Copy ONLY necessary application files
+COPY app.py .
+# COPY any other specific files needed, e.g.:
+# COPY src/ ./src/
+
+CMD ["python3", "app.py"]
