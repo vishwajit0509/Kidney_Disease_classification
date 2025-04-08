@@ -8,7 +8,8 @@ RUN apt update -y && apt install awscli -y
 WORKDIR /app
 
 # Copy app files into the container
-COPY app.py./
+COPY app.py ./
+
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
