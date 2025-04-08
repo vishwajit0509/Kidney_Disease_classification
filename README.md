@@ -13,9 +13,20 @@
 
 ## MLFLOW
 ## commands to run this
+## need to execute everytime
 
 set MLFLOW_TRACKING_URI=https://dagshub.com/vishwajitsarakpatil/Kidney_Disease_classification.mlflow
 
 set MLFLOW_TRACKING_USERNAME=vishwajitsarakpatil
 
 set MLFLOW_TRACKING_PASSWORD=2460b01ab8c7d161e94f6d9f836511cb109cd61e
+
+
+## dvc
+cmd
+deps
+params
+outs
+dvc dag
+dvc init
+dvc repro

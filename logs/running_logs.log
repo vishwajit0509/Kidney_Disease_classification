@@ -304,3 +304,714 @@ x==========x]
 [2025-04-08 19:12:13,350: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2025-04-08 19:45:39,621: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 19:45:39,621: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 19:46:06,869: INFO: _internal: 192.168.66.42 - - [08/Apr/2025 19:46:06] "GET / HTTP/1.1" 200 -]
+[2025-04-08 19:47:27,212: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\vishw\onedrive\dl\projects\kidney_disease_classification\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2025-04-08 19:47:27,231: INFO: _internal: 192.168.66.42 - - [08/Apr/2025 19:47:27] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-04-08 19:50:00,190: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 19:50:00,190: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 19:50:07,494: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 19:50:07] "GET / HTTP/1.1" 200 -]
+[2025-04-08 19:50:12,267: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\vishw\onedrive\dl\projects\kidney_disease_classification\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2025-04-08 19:50:12,267: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 19:50:12] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-04-08 19:50:57,248: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 19:50:57,248: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 19:51:06,817: INFO: _internal: 192.168.66.42 - - [08/Apr/2025 19:51:06] "GET / HTTP/1.1" 200 -]
+[2025-04-08 19:51:11,371: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\vishw\onedrive\dl\projects\kidney_disease_classification\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2025-04-08 19:51:11,371: INFO: _internal: 192.168.66.42 - - [08/Apr/2025 19:51:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-04-08 21:02:19,755: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-08 21:02:19,755: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:02:19,755: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:02:19,755: INFO: common: created directory at: artifacts]
+[2025-04-08 21:02:19,755: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-08 21:02:19,755: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 21:06:17,974: ERROR: stage_01_data_ingestion: ('Connection broken: IncompleteRead(50806133 bytes read, 6907819 more expected)', IncompleteRead(50806133 bytes read, 6907819 more expected))]
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 754, in _error_catcher
+    yield
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 900, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(50806133 bytes read, 6907819 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 1066, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 983, in read
+    data = self._raw_read(amt)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 878, in _raw_read
+    with self._error_catcher():
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\urllib3\response.py", line 778, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(50806133 bytes read, 6907819 more expected)', IncompleteRead(50806133 bytes read, 6907819 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 25, in <module>
+    obj.main()
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\users\vishw\onedrive\dl\projects\kidney_disease_classification\src\cnnClassifier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "c:\users\vishw\onedrive\dl\projects\kidney_disease_classification\src\cnnClassifier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 368, in download
+    for chunk in res.iter_content(chunk_size=CHUNK_SIZE):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(50806133 bytes read, 6907819 more expected)', IncompleteRead(50806133 bytes read, 6907819 more expected))
+[2025-04-08 21:11:59,763: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-08 21:11:59,765: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:11:59,766: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:11:59,767: INFO: common: created directory at: artifacts]
+[2025-04-08 21:11:59,767: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-08 21:11:59,768: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 21:12:13,748: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 21:12:14,192: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-04-08 21:12:27,850: INFO: stage_02_prepare_base_model: *******************]
+[2025-04-08 21:12:27,850: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-04-08 21:12:27,850: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:12:27,850: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:12:27,850: INFO: common: created directory at: artifacts]
+[2025-04-08 21:12:27,850: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-04-08 21:12:28,365: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-08 21:12:28,539: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-04-08 21:12:32,969: INFO: stage_03_model_training: *******************]
+[2025-04-08 21:12:32,969: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-04-08 21:12:32,969: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:12:32,969: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:12:32,974: INFO: common: created directory at: artifacts]
+[2025-04-08 21:12:32,974: INFO: common: created directory at: artifacts\training]
+[2025-04-08 21:13:31,076: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-04-08 21:13:37,425: INFO: stage_04_model_evaluation: *******************]
+[2025-04-08 21:13:37,425: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-04-08 21:13:37,425: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:13:37,425: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:13:37,441: INFO: common: created directory at: artifacts]
+[2025-04-08 21:13:56,734: INFO: common: json file saved at: scores.json]
+[2025-04-08 21:13:56,736: INFO: common: json file saved at: scores.json]
+[2025-04-08 21:13:56,736: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-04-08 21:14:46,397: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 21:14:46,397: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 21:14:55,037: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:14:55] "GET / HTTP/1.1" 200 -]
+[2025-04-08 21:15:00,499: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\vishw\onedrive\dl\projects\kidney_disease_classification\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2025-04-08 21:15:00,505: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:15:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-04-08 21:22:15,791: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 21:22:15,791: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 21:22:43,072: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:22:43] "GET / HTTP/1.1" 200 -]
+[2025-04-08 21:23:32,482: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:23:32] "GET /train HTTP/1.1" 200 -]
+[2025-04-08 21:23:32,524: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:23:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-04-08 21:24:45,073: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 21:24:45,073: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 21:24:48,416: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:24:48] "GET / HTTP/1.1" 200 -]
+[2025-04-08 21:24:54,066: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\vishw\onedrive\dl\projects\kidney_disease_classification\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("training", "model.h5"))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at training\model.h5
+[2025-04-08 21:24:54,079: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:24:54] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-04-08 21:25:34,065: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:25:34] "GET /train HTTP/1.1" 200 -]
+[2025-04-08 21:25:58,687: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:25:58] "GET / HTTP/1.1" 200 -]
+[2025-04-08 21:26:08,152: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\vishw\onedrive\dl\projects\kidney_disease_classification\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("artifacts","training", "model.h5"))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at training\model.h5
+[2025-04-08 21:26:08,168: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:26:08] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-04-08 21:26:30,368: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 21:26:30,368: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 21:26:33,620: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:26:33] "GET / HTTP/1.1" 200 -]
+[2025-04-08 21:26:43,424: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:26:43] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 21:27:49,830: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 21:27:49,830: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 21:27:56,153: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:27:56] "GET / HTTP/1.1" 200 -]
+[2025-04-08 21:28:02,297: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:28:02] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 21:29:41,466: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-08 21:29:41,475: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:29:41,475: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:29:41,475: INFO: common: created directory at: artifacts]
+[2025-04-08 21:29:41,475: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-08 21:29:41,475: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 21:29:58,037: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 21:29:58,498: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-04-08 21:30:09,688: INFO: stage_02_prepare_base_model: *******************]
+[2025-04-08 21:30:09,688: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-04-08 21:30:09,690: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:30:09,691: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:30:09,691: INFO: common: created directory at: artifacts]
+[2025-04-08 21:30:09,692: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-04-08 21:30:10,054: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-08 21:30:10,230: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-04-08 21:30:15,331: INFO: stage_03_model_training: *******************]
+[2025-04-08 21:30:15,331: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-04-08 21:30:15,331: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:30:15,331: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:30:15,331: INFO: common: created directory at: artifacts]
+[2025-04-08 21:30:15,347: INFO: common: created directory at: artifacts\training]
+[2025-04-08 21:31:27,988: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-04-08 21:31:34,345: INFO: stage_04_model_evaluation: *******************]
+[2025-04-08 21:31:34,346: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-04-08 21:31:34,349: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:31:34,350: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:31:34,351: INFO: common: created directory at: artifacts]
+[2025-04-08 21:31:53,682: INFO: common: json file saved at: scores.json]
+[2025-04-08 21:31:53,684: INFO: common: json file saved at: scores.json]
+[2025-04-08 21:31:55,149: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-08 21:31:55,698: INFO: builder_impl: Assets written to: C:\Users\vishw\AppData\Local\Temp\tmpgor8z6_8\model\data\model\assets]
+[2025-04-08 21:32:04,288: ERROR: stage_04_model_evaluation: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 30, in <module>
+    obj.main()
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "c:\users\vishw\onedrive\dl\projects\kidney_disease_classification\src\cnnClassifier\components\model_evaluation_mlflow.py", line 72, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2025-04-08 21:33:43,088: INFO: stage_04_model_evaluation: *******************]
+[2025-04-08 21:33:43,088: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-04-08 21:33:43,088: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:33:43,088: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:33:43,088: INFO: common: created directory at: artifacts]
+[2025-04-08 21:33:54,792: INFO: common: json file saved at: scores.json]
+[2025-04-08 21:33:54,794: INFO: common: json file saved at: scores.json]
+[2025-04-08 21:33:57,288: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-08 21:33:57,743: INFO: builder_impl: Assets written to: C:\Users\vishw\AppData\Local\Temp\tmpk1c5b9_3\model\data\model\assets]
+[2025-04-08 21:34:47,915: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-04-08 21:37:13,845: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-08 21:37:13,845: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:37:13,845: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:37:13,845: INFO: common: created directory at: artifacts]
+[2025-04-08 21:37:13,845: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-08 21:37:13,845: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 21:37:27,604: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 21:37:28,062: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-04-08 21:37:38,887: INFO: stage_02_prepare_base_model: *******************]
+[2025-04-08 21:37:38,887: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-04-08 21:37:38,887: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:37:38,887: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:37:38,887: INFO: common: created directory at: artifacts]
+[2025-04-08 21:37:38,887: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-04-08 21:37:39,213: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-08 21:37:39,371: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-04-08 21:37:43,890: INFO: stage_03_model_training: *******************]
+[2025-04-08 21:37:43,906: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-04-08 21:37:43,908: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:37:43,908: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:37:43,909: INFO: common: created directory at: artifacts]
+[2025-04-08 21:37:43,910: INFO: common: created directory at: artifacts\training]
+[2025-04-08 21:38:41,144: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-04-08 21:38:47,400: INFO: stage_04_model_evaluation: *******************]
+[2025-04-08 21:38:47,400: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-04-08 21:38:47,403: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:38:47,405: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:38:47,405: INFO: common: created directory at: artifacts]
+[2025-04-08 21:39:06,807: INFO: common: json file saved at: scores.json]
+[2025-04-08 21:39:06,809: INFO: common: json file saved at: scores.json]
+[2025-04-08 21:39:09,408: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-08 21:39:09,853: INFO: builder_impl: Assets written to: C:\Users\vishw\AppData\Local\Temp\tmp293anlfe\model\data\model\assets]
+[2025-04-08 21:39:54,488: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-04-08 21:43:10,582: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-08 21:43:10,598: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:43:10,598: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:43:10,598: INFO: common: created directory at: artifacts]
+[2025-04-08 21:43:10,598: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-08 21:43:10,598: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 21:43:25,130: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 21:43:25,566: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-04-08 21:43:36,417: INFO: stage_02_prepare_base_model: *******************]
+[2025-04-08 21:43:36,433: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-04-08 21:43:36,433: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:43:36,433: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:43:36,433: INFO: common: created directory at: artifacts]
+[2025-04-08 21:43:36,433: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-04-08 21:43:36,791: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-08 21:43:36,963: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-04-08 21:43:41,437: INFO: stage_03_model_training: *******************]
+[2025-04-08 21:43:41,437: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-04-08 21:43:41,437: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:43:41,453: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:43:41,453: INFO: common: created directory at: artifacts]
+[2025-04-08 21:43:41,453: INFO: common: created directory at: artifacts\training]
+[2025-04-08 21:44:36,849: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-04-08 21:44:43,367: INFO: stage_04_model_evaluation: *******************]
+[2025-04-08 21:44:43,367: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-04-08 21:44:43,367: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 21:44:43,367: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 21:44:43,367: INFO: common: created directory at: artifacts]
+[2025-04-08 21:45:02,803: INFO: common: json file saved at: scores.json]
+[2025-04-08 21:45:02,805: INFO: common: json file saved at: scores.json]
+[2025-04-08 21:45:05,567: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-08 21:45:06,051: INFO: builder_impl: Assets written to: C:\Users\vishw\AppData\Local\Temp\tmp7f51es6t\model\data\model\assets]
+[2025-04-08 21:45:48,990: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-04-08 21:45:57,720: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 21:45:57,720: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 21:46:03,900: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:46:03] "GET / HTTP/1.1" 200 -]
+[2025-04-08 21:46:08,850: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:46:08] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 21:46:30,120: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:46:30] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 21:46:35,116: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:46:35] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 21:46:41,762: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:46:41] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 21:46:44,016: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001BADAA3A170> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-04-08 21:46:44,016: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:46:44] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 21:46:54,061: WARNING: polymorphic_function: 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001BADAA3B0A0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-04-08 21:46:54,061: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:46:54] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 21:47:11,918: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:47:11] "GET /train HTTP/1.1" 200 -]
+[2025-04-08 21:47:34,683: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 21:47:34,683: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 21:47:38,304: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:47:38] "GET / HTTP/1.1" 200 -]
+[2025-04-08 21:47:57,049: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:47:57] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 21:53:08,836: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 21:53:08,836: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 21:53:11,940: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:53:11] "GET / HTTP/1.1" 200 -]
+[2025-04-08 21:53:19,176: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:53:19] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 21:54:41,543: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 21:54:41] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:00:12,231: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-08 22:00:12,231: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 22:00:12,231: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 22:00:12,246: INFO: common: created directory at: artifacts]
+[2025-04-08 22:00:12,246: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-08 22:00:12,246: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 22:00:30,181: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 22:00:30,650: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-04-08 22:00:42,244: INFO: stage_02_prepare_base_model: *******************]
+[2025-04-08 22:00:42,244: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-04-08 22:00:42,244: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 22:00:42,244: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 22:00:42,244: INFO: common: created directory at: artifacts]
+[2025-04-08 22:00:42,244: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-04-08 22:00:42,695: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-08 22:00:42,885: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-04-08 22:00:47,519: INFO: stage_03_model_training: *******************]
+[2025-04-08 22:00:47,519: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-04-08 22:00:47,521: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 22:00:47,521: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 22:00:47,523: INFO: common: created directory at: artifacts]
+[2025-04-08 22:00:47,523: INFO: common: created directory at: artifacts\training]
+[2025-04-08 22:01:46,235: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-04-08 22:01:53,000: INFO: stage_04_model_evaluation: *******************]
+[2025-04-08 22:01:53,000: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-04-08 22:01:53,014: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 22:01:53,015: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 22:01:53,015: INFO: common: created directory at: artifacts]
+[2025-04-08 22:02:13,011: INFO: common: json file saved at: scores.json]
+[2025-04-08 22:02:13,021: INFO: common: json file saved at: scores.json]
+[2025-04-08 22:02:14,970: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-08 22:02:15,674: INFO: builder_impl: Assets written to: C:\Users\vishw\AppData\Local\Temp\tmpx6tvystk\model\data\model\assets]
+[2025-04-08 22:02:24,508: ERROR: stage_04_model_evaluation: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 30, in <module>
+    obj.main()
+  File "C:\Users\vishw\OneDrive\DL\PROJECTS\Kidney_Disease_classification\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "c:\users\vishw\onedrive\dl\projects\kidney_disease_classification\src\cnnClassifier\components\model_evaluation_mlflow.py", line 72, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "C:\Users\vishw\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2025-04-08 22:03:09,453: INFO: stage_04_model_evaluation: *******************]
+[2025-04-08 22:03:09,453: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-04-08 22:03:09,453: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 22:03:09,469: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 22:03:09,469: INFO: common: created directory at: artifacts]
+[2025-04-08 22:04:22,173: INFO: stage_04_model_evaluation: *******************]
+[2025-04-08 22:04:22,173: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-04-08 22:04:22,173: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 22:04:22,173: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 22:04:22,173: INFO: common: created directory at: artifacts]
+[2025-04-08 22:04:34,764: INFO: common: json file saved at: scores.json]
+[2025-04-08 22:04:34,765: INFO: common: json file saved at: scores.json]
+[2025-04-08 22:04:37,415: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-08 22:04:37,933: INFO: builder_impl: Assets written to: C:\Users\vishw\AppData\Local\Temp\tmpm1gs1h_w\model\data\model\assets]
+[2025-04-08 22:05:24,871: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-04-08 22:07:03,675: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-08 22:07:03,675: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 22:07:03,685: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 22:07:03,685: INFO: common: created directory at: artifacts]
+[2025-04-08 22:07:03,685: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-08 22:07:03,685: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 22:07:17,741: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1yIaxRBpqHr6ROtGOtb6IpWz-eSJDf1qu/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-04-08 22:07:18,255: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-04-08 22:07:30,175: INFO: stage_02_prepare_base_model: *******************]
+[2025-04-08 22:07:30,175: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-04-08 22:07:30,175: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 22:07:30,175: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 22:07:30,175: INFO: common: created directory at: artifacts]
+[2025-04-08 22:07:30,175: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-04-08 22:07:30,521: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-04-08 22:07:30,676: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-04-08 22:07:35,116: INFO: stage_03_model_training: *******************]
+[2025-04-08 22:07:35,116: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-04-08 22:07:35,118: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 22:07:35,118: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 22:07:35,118: INFO: common: created directory at: artifacts]
+[2025-04-08 22:07:35,118: INFO: common: created directory at: artifacts\training]
+[2025-04-08 22:08:31,223: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-04-08 22:08:38,190: INFO: stage_04_model_evaluation: *******************]
+[2025-04-08 22:08:38,190: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-04-08 22:08:38,190: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-08 22:08:38,207: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-08 22:08:38,207: INFO: common: created directory at: artifacts]
+[2025-04-08 22:08:58,082: INFO: common: json file saved at: scores.json]
+[2025-04-08 22:08:58,085: INFO: common: json file saved at: scores.json]
+[2025-04-08 22:09:01,035: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-04-08 22:09:01,569: INFO: builder_impl: Assets written to: C:\Users\vishw\AppData\Local\Temp\tmpnpnmwz97\model\data\model\assets]
+[2025-04-08 22:09:50,704: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-04-08 22:10:06,437: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.66.42:8080]
+[2025-04-08 22:10:06,437: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:10:10,194: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:10:10] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:10:15,427: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:10:15] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:10:20,834: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x00000220039CA0E0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-04-08 22:10:20,834: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:10:20] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:10:27,906: WARNING: polymorphic_function: 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x00000220039CB010> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-04-08 22:10:27,918: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:10:27] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:11:19,509: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://192.168.66.42:8081]
+[2025-04-08 22:11:19,509: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:11:23,594: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:11:23] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:11:29,135: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:11:29] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:11:39,872: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:11:39] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:11:47,407: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:11:47] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:14:30,446: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:14:30] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:14:31,489: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:14:31] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:14:52,254: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:14:52] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:14:52,813: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:14:52] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:14:53,059: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:14:53] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:14:53,325: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:14:53] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:14:54,228: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:14:54] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:14:54,461: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:14:54] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:15:00,908: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:15:00] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:15:01,191: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:15:01] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:15:04,951: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:15:04] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:15:10,616: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:15:10] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:15:26,579: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:15:26] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:15:32,333: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001831F0C1A20> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-04-08 22:15:32,335: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:15:32] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:17:09,515: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:17:09] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:17:15,145: WARNING: polymorphic_function: 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001831F0C2950> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-04-08 22:17:15,159: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:17:15] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:17:34,777: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:17:34] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:17:40,926: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:17:40] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:18:02,412: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:18:02] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:18:04,278: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:18:04] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:19:04,014: ERROR: _internal: 192.168.66.180 - - [08/Apr/2025 22:19:04] code 400, message Bad HTTP/0.9 request type ('hi')]
+[2025-04-08 22:19:04,014: INFO: _internal: 192.168.66.180 - - [08/Apr/2025 22:19:04] "[35m[1mhi SHUBHAM[0m" HTTPStatus.BAD_REQUEST -]
+[2025-04-08 22:19:05,336: ERROR: _internal: 192.168.66.180 - - [08/Apr/2025 22:19:05] code 400, message Bad HTTP/0.9 request type ('hi')]
+[2025-04-08 22:19:05,336: INFO: _internal: 192.168.66.180 - - [08/Apr/2025 22:19:05] "[35m[1mhi SHUBHAM[0m" HTTPStatus.BAD_REQUEST -]
+[2025-04-08 22:19:06,957: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://192.168.66.42:8081]
+[2025-04-08 22:19:06,957: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:19:10,745: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:19:10] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:19:18,898: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:19:18] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:19:26,149: ERROR: _internal: 192.168.66.180 - - [08/Apr/2025 22:19:26] code 400, message Bad HTTP/0.9 request type ('hi')]
+[2025-04-08 22:19:26,149: INFO: _internal: 192.168.66.180 - - [08/Apr/2025 22:19:26] "[35m[1mhi SHUBHAM[0m" HTTPStatus.BAD_REQUEST -]
+[2025-04-08 22:19:45,979: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://192.168.66.42:8082]
+[2025-04-08 22:19:45,979: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:19:49,042: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:19:49] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:19:53,821: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:19:53] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:20:23,804: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:20:23] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:20:30,839: ERROR: _internal: 192.168.66.180 - - [08/Apr/2025 22:20:30] code 400, message Bad HTTP/0.9 request type ('hi')]
+[2025-04-08 22:20:30,840: INFO: _internal: 192.168.66.180 - - [08/Apr/2025 22:20:30] "[35m[1mhi SHUBHAM[0m" HTTPStatus.BAD_REQUEST -]
+[2025-04-08 22:21:45,437: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:21:45] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:21:46,215: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:21:46] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:21:46,388: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:21:46] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:22:17,899: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://192.168.66.42:8082]
+[2025-04-08 22:22:17,899: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:22:19,630: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:22:19] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:23:14,254: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:23:14] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:23:14,795: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:23:14] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:23:28,173: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://192.168.66.42:8082]
+[2025-04-08 22:23:28,173: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:23:29,749: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:23:29] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:23:41,498: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:23:41] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:23:43,680: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:23:43] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:24:01,679: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:24:01] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:24:38,734: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://192.168.66.42:8082]
+[2025-04-08 22:24:38,734: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:24:40,600: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:24:40] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:26:43,772: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://192.168.66.42:8082]
+[2025-04-08 22:26:43,772: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:26:47,472: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:26:47] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:26:56,509: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:26:56] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:27:18,491: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:27:18] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:27:30,258: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:27:30] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:27:50,436: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:27:50] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:28:07,052: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x00000236002E9FC0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-04-08 22:28:07,060: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:28:07] "POST /predict HTTP/1.1" 200 -]
