@@ -1015,3 +1015,35 @@ x==========x]
 [2025-04-08 22:27:50,436: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:27:50] "POST /predict HTTP/1.1" 200 -]
 [2025-04-08 22:28:07,052: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x00000236002E9FC0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
 [2025-04-08 22:28:07,060: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:28:07] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:37:46,882: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://192.168.66.42:8082]
+[2025-04-08 22:37:46,882: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:37:55,447: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:37:55] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:38:04,809: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:38:04] "POST /predict HTTP/1.1" 200 -]
+[2025-04-08 22:41:08,983: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://192.168.66.42:8082]
+[2025-04-08 22:41:08,983: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:41:11,261: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:41:11] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:41:32,630: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:41:32] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:41:33,297: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:41:33] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:41:33,398: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:41:33] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:41:33,553: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:41:33] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:41:40,553: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:41:40] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:41:45,849: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:41:45] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:42:07,429: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://192.168.66.42:8082]
+[2025-04-08 22:42:07,429: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:42:14,584: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:42:14] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:42:58,416: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://192.168.66.42:8082]
+[2025-04-08 22:42:58,416: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-08 22:43:05,296: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:43:05] "GET / HTTP/1.1" 200 -]
+[2025-04-08 22:43:12,655: INFO: _internal: 127.0.0.1 - - [08/Apr/2025 22:43:12] "POST /predict HTTP/1.1" 200 -]
