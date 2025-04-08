@@ -36,3 +36,5 @@ ECR TO SAVE THE  DOCCKER IMAGE
 URI: 390844754484.dkr.ecr.ap-south-1.amazonaws.com/kidney-ct-scan
 
 done
+
+deployement done
